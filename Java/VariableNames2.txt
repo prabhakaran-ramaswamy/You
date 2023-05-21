@@ -1,0 +1,71 @@
+public class VariableNamesExample {
+    public static void main(String[] args) {
+        // Single-word variable names
+        int age = 25;
+        double salary = 50000.0;
+        char grade = 'A';
+        boolean isActive = true;
+
+        // Multi-word variable names (camelCase)
+        int studentCount = 30;
+        String firstName = "John Doe";
+        double averageScore = 87.5;
+        boolean hasPermissionToAccess = false;
+
+        // Variable names with digits
+        int quantity2 = 10;
+        double price3 = 9.99;
+        int count_2021 = 100;
+
+        // Variable names with underscores
+        int max_value = 100;
+        double min_value = 0.5;
+        String first_name = "Alice";
+        boolean is_active = true;
+
+        // Invalid variable names (commented out)
+        // int 123number = 123;
+        // double average-score = 85.0;
+        // char $grade = 'B';
+
+        // Constants (final variables)
+        final int MAX_SIZE = 1000;
+        final double PI = 3.14159;
+        final String DEFAULT_NAME = "Unknown";
+    }
+}
+
+
+In this program, we have different variable names to demonstrate the possible naming conventions:
+
+Single-Word Variable Names:
+
+age: Represents an integer value.
+salary: Represents a floating-point number.
+grade: Represents a character.
+isActive: Represents a boolean value.
+Multi-Word Variable Names (Camel Case):
+
+studentCount: Represents the count of students.
+firstName: Represents the first name of a person.
+averageScore: Represents the average score of something.
+hasPermissionToAccess: Represents whether someone has permission to access something.
+Variable Names with Digits:
+
+quantity2: Represents a quantity with a digit suffix.
+price3: Represents a price with a digit suffix.
+count_2021: Represents a count with a digit suffix.
+Variable Names with Underscores:
+
+max_value: Represents a maximum value with an underscore.
+min_value: Represents a minimum value with an underscore.
+first_name: Represents the first name of a person with an underscore.
+is_active: Represents a boolean value with an underscore.
+Invalid Variable Names (commented out):
+
+Invalid variable names are commented out to prevent compilation errors.
+Constants (Final Variables):
+
+MAX_SIZE, PI, and DEFAULT_NAME are declared as constants using the final keyword.
+By following the Java naming conventions, you can create variable names that are easy to read and understand, making your code more maintainable and readable. Remember to choose meaningful and descriptive variable names that reflect the purpose and context of the variable.
+

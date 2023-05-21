@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class WhileStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        int factorial = 1;
+        int i = 1;
+
+        while (i <= number) {
+            factorial *= i;
+            i++;
+        }
+
+        System.out.println("The factorial of " + number + " is: " + factorial);
+    }
+}
+
+
+In this program, we take input from the user using the Scanner class to read an integer number. Here's how the program works:
+
+We create a Scanner object to read input from the user.
+
+The program prompts the user to enter a number using System.out.print().
+
+We read the input from the user using scanner.nextInt() and store it in the number variable.
+
+We initialize the factorial variable to 1, and the i variable to 1.
+
+We use a while loop to calculate the factorial of the number:
+
+The loop continues as long as the condition i <= number is true.
+In each iteration, we multiply the current value of factorial by i and update the factorial value.
+We increment i by 1 in each iteration.
+After the loop finishes, we print the calculated factorial using System.out.println().
+
+When you run this program, it will prompt you to enter a number. It will then calculate the factorial of the entered number using a while loop and display the result.
+
+For example, if you enter 5, the output will be:
+
+The factorial of 5 is: 120
+This program demonstrates how the while loop can be used to repeatedly execute a block of code until a certain condition is met. In this case, it calculates the factorial of a number.

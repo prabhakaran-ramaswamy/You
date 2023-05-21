@@ -1,0 +1,86 @@
+public class StaticVariableExample {
+    // Static variables
+    static int totalCount = 0;
+    static String companyName = "ABC Corporation";
+
+    // Static method
+    static void displayCompanyInfo() {
+        System.out.println("Company Name: " + companyName);
+        System.out.println("Total Employees: " + totalCount);
+    }
+
+    // Instance variables and method
+    String employeeName;
+    int employeeId;
+
+    void displayEmployeeInfo() {
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Company Name: " + companyName);
+        System.out.println("Total Employees: " + totalCount);
+    }
+
+    public static void main(String[] args) {
+        // Accessing static variables and method using class name
+        System.out.println("Total Employees: " + totalCount);
+        System.out.println("Company Name: " + companyName);
+        displayCompanyInfo();
+
+        // Creating objects of the class
+        StaticVariableExample employee1 = new StaticVariableExample();
+        employee1.employeeName = "John Doe";
+        employee1.employeeId = 1001;
+        employee1.displayEmployeeInfo();
+
+        StaticVariableExample employee2 = new StaticVariableExample();
+        employee2.employeeName = "Alice Smith";
+        employee2.employeeId = 1002;
+        employee2.displayEmployeeInfo();
+
+        // Modifying static variables
+        totalCount = 2;
+        companyName = "XYZ Corporation";
+
+        // Accessing modified static variables
+        employee1.displayEmployeeInfo();
+        employee2.displayEmployeeInfo();
+        displayCompanyInfo();
+    }
+}
+
+
+In this program, we have a class StaticVariableExample that contains static and instance variables, as well as static and instance methods. Here's how the program works:
+
+The static variables totalCount and companyName are declared outside any method and are associated with the class itself.
+
+The static method displayCompanyInfo() is also defined within the class, which displays the company name and the total number of employees.
+
+Inside the class, we have instance variables employeeName and employeeId, along with an instance method displayEmployeeInfo() that displays the employee's name, ID, company name, and total employees.
+
+In the main method, we can directly access the static variables and static method using the class name (StaticVariableExample.totalCount, StaticVariableExample.companyName, and StaticVariableExample.displayCompanyInfo()).
+
+We create two objects employee1 and employee2 of the StaticVariableExample class and set their respective employee names and IDs.
+
+We can access the instance variables and instance method using the object names (employee1.employeeName, employee1.employeeId, and employee1.displayEmployeeInfo()).
+
+We modify the static variables totalCount and companyName to update the total count of employees and the company name.
+
+We again access the instance method displayEmployeeInfo() and the static method displayCompanyInfo() to observe the updated values.
+
+When you run this program, you will see the following output:
+
+Total Employees: 0
+Company Name: ABC Corporation
+Company Name: ABC Corporation
+Total Employees: 0
+Employee Name: John Doe
+Employee ID: 1001
+Company Name: ABC Corporation
+Total Employees: 0
+Employee Name: Alice Smith
+Employee ID: 1002
+Company Name: ABC Corporation
+Total Employees: 2
+Company Name: XYZ Corporation
+
+As you can see, the static variables are shared among all instances of the class, and changes made to them are reflected in all instances. Static variables and methods are accessed using the class name, while instance variables and methods are accessed using object names.

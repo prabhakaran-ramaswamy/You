@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class IfElseStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            System.out.println("You are not eligible to vote.");
+        }
+    }
+}
+
+In this program, we take input from the user for their age and assign it to the variable age. The if-else statement checks the value of age and executes the corresponding block of code based on the condition:
+
+If age is greater than or equal to 18, it prints "You are eligible to vote."
+If the condition is not true (i.e., age is less than 18), it executes the code inside the else block and prints "You are not eligible to vote."
+You can run this program and enter different ages to see the output based on the conditions specified in the if-else statement.

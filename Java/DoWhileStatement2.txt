@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class DoWhileStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int sum = 0;
+        int number;
+
+        do {
+            System.out.print("Enter a number (enter 0 to exit): ");
+            number = scanner.nextInt();
+
+            sum += number;
+        } while (number != 0);
+
+        System.out.println("The sum of the numbers is: " + sum);
+    }
+}
+
+
+In this program, we ask the user to enter numbers until they enter 0, and then calculate the sum of the entered numbers. Here's how the program works:
+
+We create a Scanner object to read input from the user.
+
+We declare variables sum to store the sum of the numbers entered and number to hold each number entered by the user.
+
+We use a do-while loop to repeatedly ask the user for a number and add it to the sum:
+
+The loop executes at least once before checking the condition.
+Inside the loop, we prompt the user to enter a number using System.out.print().
+We read the input from the user using scanner.nextInt() and store it in the number variable.
+We add the entered number to the sum variable.
+The loop continues as long as the user's input is not equal to 0 (number != 0).
+
+After the loop finishes, we print the calculated sum using System.out.println().
+
+When you run this program, it will repeatedly prompt you to enter a number until you enter 0. It will then calculate the sum of all the entered numbers and display the result.
+
+For example, if you enter 5, 10, 3, and 0 as your numbers, the program will print:
+
+Enter a number (enter 0 to exit): 5
+Enter a number (enter 0 to exit): 10
+Enter a number (enter 0 to exit): 3
+Enter a number (enter 0 to exit): 0
+The sum of the numbers is: 18
+
+This program demonstrates how the do-while loop can be used to repeatedly execute a block of code until a certain condition is met. In this case, it allows the user to enter numbers and calculates their sum until they enter 0 to exit.
+

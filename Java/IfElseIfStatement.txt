@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class IfElseIfStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your grade: ");
+        int grade = scanner.nextInt();
+
+        if (grade >= 90 && grade <= 100) {
+            System.out.println("Your grade is A.");
+        } else if (grade >= 80 && grade < 90) {
+            System.out.println("Your grade is B.");
+        } else if (grade >= 70 && grade < 80) {
+            System.out.println("Your grade is C.");
+        } else if (grade >= 60 && grade < 70) {
+            System.out.println("Your grade is D.");
+        } else if (grade < 60) {
+            System.out.println("Your grade is F.");
+        } else {
+            System.out.println("Invalid grade.");
+        }
+    }
+}
+
+
+In this program, we take input from the user for their grade and assign it to the variable grade. The if-else if statement checks the value of grade and executes the corresponding block of code based on the conditions:
+
+If grade is between 90 and 100 (inclusive), it prints "Your grade is A."
+If grade is between 80 and 89 (inclusive), it prints "Your grade is B."
+If grade is between 70 and 79 (inclusive), it prints "Your grade is C."
+If grade is between 60 and 69 (inclusive), it prints "Your grade is D."
+If grade is less than 60, it prints "Your grade is F."
+If none of the above conditions are true, it executes the code inside the else block and prints "Invalid grade."
+You can run this program and enter different grades to see the output based on the conditions specified in the if-else if statement.
+

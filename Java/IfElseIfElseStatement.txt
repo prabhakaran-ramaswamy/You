@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class IfElseIfElseStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}
+
+In this program, we take input from the user and assign it to the variable number. The if-else if-else statement checks the value of number and executes the corresponding block of code based on the conditions:
+
+If number is greater than 0, it prints "The number is positive."
+If number is less than 0, it prints "The number is negative."
+If none of the above conditions are true (i.e., number is equal to 0), it executes the code inside the else block and prints "The number is zero."
+You can run this program and enter different numbers to see the output based on the conditions specified in the if-else if-else statement.

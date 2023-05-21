@@ -1,0 +1,35 @@
+public class ContinueStatementExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            System.out.println("Iteration: " + i);
+        }
+    }
+}
+
+
+In this program, we use a for loop to iterate from 1 to 5. However, when the loop variable i is equal to 3, we use the continue statement to skip the current iteration and continue with the next iteration. Here's how the program works:
+
+We define a for loop that initializes the loop variable i to 1, checks the condition i <= 5, and increments i by 1 after each iteration.
+
+Inside the loop, we check if the value of i is equal to 3 using the if statement.
+
+If i is equal to 3, we encounter the continue statement. This causes the program to skip the remaining code in the current iteration and continue with the next iteration of the loop.
+
+If the if condition is not met (i.e., i is not equal to 3), the program will execute the code inside the loop, which prints the iteration number.
+
+After the loop finishes iterating through all values of i, the program exits the loop.
+
+When you run this program, it will iterate from 1 to 5, printing the iteration number for each iteration. However, when i is equal to 3, the continue statement is encountered, and the current iteration is skipped. The program then continues with the next iteration.
+
+The output of the program will be:
+
+Iteration: 1
+Iteration: 2
+Iteration: 4
+Iteration: 5
+
+This program demonstrates how the continue statement can be used within a loop to skip the remaining code in the current iteration and proceed with the next iteration based on a certain condition. In this case, the iteration is skipped when i is equal to 3.
+

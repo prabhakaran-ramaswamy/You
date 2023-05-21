@@ -1,0 +1,55 @@
+public class ConstantsExample {
+    // Constants for weekdays
+    public static final String MONDAY = "Monday";
+    public static final String TUESDAY = "Tuesday";
+    public static final String WEDNESDAY = "Wednesday";
+    public static final String THURSDAY = "Thursday";
+    public static final String FRIDAY = "Friday";
+    public static final String SATURDAY = "Saturday";
+    public static final String SUNDAY = "Sunday";
+
+    public static void main(String[] args) {
+        // Accessing constants
+        System.out.println("Days of the Week:");
+        System.out.println(MONDAY);
+        System.out.println(TUESDAY);
+        System.out.println(WEDNESDAY);
+        System.out.println(THURSDAY);
+        System.out.println(FRIDAY);
+        System.out.println(SATURDAY);
+        System.out.println(SUNDAY);
+    }
+}
+
+
+In this program, we have defined constants for the days of the week:
+
+MONDAY: Represents Monday.
+TUESDAY: Represents Tuesday.
+WEDNESDAY: Represents Wednesday.
+THURSDAY: Represents Thursday.
+FRIDAY: Represents Friday.
+SATURDAY: Represents Saturday.
+SUNDAY: Represents Sunday.
+Here's how the program works:
+
+The constants are declared using the final keyword to indicate that their values cannot be modified.
+
+In the main method, we directly access the constants by their names (MONDAY, TUESDAY, etc.).
+
+We print the constants using System.out.println() statements to display the days of the week.
+
+When you run this program, you will see the following output:
+
+Days of the Week:
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+
+You can define and use constants in your program to provide meaningful names to values that should remain constant throughout the program. Constants help in making your code more readable and maintainable by using descriptive names for important values.
+

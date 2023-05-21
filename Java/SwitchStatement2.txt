@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class SwitchStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a day number (1-7): ");
+        int dayNumber = scanner.nextInt();
+
+        String dayName;
+
+        switch (dayNumber) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wednesday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid day number";
+                break;
+        }
+
+        System.out.println("The day corresponding to " + dayNumber + " is " + dayName + ".");
+    }
+}
+
+
+In this program, we prompt the user to enter a day number (1-7) and display the corresponding day name. Here's how the program works:
+
+We create a Scanner object to read input from the user.
+
+We prompt the user to enter a day number using System.out.print().
+
+We read the user's input using scanner.nextInt() and store it in the dayNumber variable.
+
+We declare a String variable dayName to hold the name of the day.
+
+We use a switch statement to check the value of dayNumber and assign the corresponding day name to dayName:
+
+If dayNumber is equal to 1, it assigns the value "Sunday" to dayName.
+If dayNumber is equal to 2, it assigns the value "Monday" to dayName.
+If dayNumber is equal to 3, it assigns the value "Tuesday" to dayName.
+If dayNumber is equal to 4, it assigns the value "Wednesday" to dayName.
+If dayNumber is equal to 5, it assigns the value "Thursday" to dayName.
+If dayNumber is equal to 6, it assigns the value "Friday" to dayName.
+If dayNumber is equal to 7, it assigns the value "Saturday" to dayName.
+If dayNumber does not match any of the above cases, it assigns the value "Invalid day number" to dayName.
+After executing the appropriate code block, the program exits the switch statement.
+
+We print the day name corresponding to the entered day number using System.out.println().
+
+When you run this program, it will prompt you to enter a day number. Based on your input, it will display the corresponding day name.
+
+For example, if you enter 3, the output will be:
+
+The day corresponding to 3 is Tuesday.
+
+If you enter 8, the output will be:
+
+The day corresponding to 8 is Invalid day number.
+
+This program demonstrates how the switch statement can be used to select a code block based on the value of a variable. In this case, it allows the user to enter a day number and displays the corresponding day name.
+

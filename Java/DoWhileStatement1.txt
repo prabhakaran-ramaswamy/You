@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class DoWhileStatementExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int guess;
+        int secretNumber = 42;
+
+        do {
+            System.out.print("Guess the secret number (between 1 and 100): ");
+            guess = scanner.nextInt();
+
+            if (guess < secretNumber) {
+                System.out.println("Too low! Try again.");
+            } else if (guess > secretNumber) {
+                System.out.println("Too high! Try again.");
+            } else {
+                System.out.println("Congratulations! You guessed the secret number.");
+            }
+        } while (guess != secretNumber);
+    }
+}
+
+
+In this program, we ask the user to guess a secret number and provide feedback until they guess the correct number. Here's how the program works:
+
+We create a Scanner object to read input from the user.
+
+We declare variables guess to store the user's guess and secretNumber to hold the secret number (in this example, the secret number is 42).
+
+We use a do-while loop to repeatedly ask the user for their guess and provide feedback:
+
+The loop executes at least once before checking the condition.
+Inside the loop, we prompt the user to enter their guess using System.out.print().
+We read the input from the user using scanner.nextInt() and store it in the guess variable.
+Inside the loop, we check the user's guess against the secret number:
+
+If the guess is less than the secret number, we inform the user that their guess is too low.
+If the guess is greater than the secret number, we inform the user that their guess is too high.
+If the guess is equal to the secret number, we congratulate the user for guessing the correct number.
+The loop continues as long as the user's guess is not equal to the secret number (guess != secretNumber).
+
+When you run this program, it will prompt you to guess the secret number. It will provide feedback based on your guess and continue until you guess the correct number.
+
+For example, if you enter 50 as your guess, the program will print:
+
+Too high! Try again.
+If you then enter 30 as your guess, the program will print:
+
+Too low! Try again.
+
+Finally, if you enter 42 as your guess, the program will print:
+
+Congratulations! You guessed the secret number.
+
+This program demonstrates how the do-while loop can be used to repeatedly execute a block of code until a certain condition is met. In this case, it allows the user to keep guessing the secret number until they guess it correctly.
+
+

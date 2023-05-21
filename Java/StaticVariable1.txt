@@ -1,0 +1,57 @@
+public class StaticVariableExample {
+    // Static variable
+    static int count = 0;
+
+    public static void main(String[] args) {
+        // Accessing the static variable
+        System.out.println("Count: " + count);
+
+        // Modifying the static variable
+        count = 10;
+
+        // Accessing the modified static variable
+        System.out.println("Count: " + count);
+
+        // Creating objects of the class
+        StaticVariableExample obj1 = new StaticVariableExample();
+        StaticVariableExample obj2 = new StaticVariableExample();
+
+        // Accessing the static variable using different objects
+        System.out.println("Obj1 Count: " + obj1.count);
+        System.out.println("Obj2 Count: " + obj2.count);
+
+        // Modifying the static variable using one object
+        obj1.count = 20;
+
+        // Accessing the modified static variable using different objects
+        System.out.println("Obj1 Count: " + obj1.count);
+        System.out.println("Obj2 Count: " + obj2.count);
+    }
+}
+
+
+In this program, we have a class StaticVariableExample that contains a static variable count. Here's how the program works:
+
+The static variable count is declared outside any method and is associated with the class itself, rather than with any specific instance of the class.
+
+In the main method, we can directly access the static variable using the class name (StaticVariableExample.count). Initially, the value of count is 0.
+
+We can modify the static variable by assigning a new value to it (count = 10).
+
+We then create two objects obj1 and obj2 of the StaticVariableExample class.
+
+We can access the static variable using different objects (obj1.count and obj2.count). However, note that static variables are shared among all instances of the class, so modifying the static variable using one object affects all other objects.
+
+We modify the static variable using obj1 (obj1.count = 20), and the modification is reflected when accessing the static variable using both obj1 and obj2.
+
+When you run this program, you will see the following output:
+
+Count: 0
+Count: 10
+Obj1 Count: 10
+Obj2 Count: 10
+Obj1 Count: 20
+Obj2 Count: 20
+
+
+As you can see, changes made to the static variable are shared across different objects of the class. Static variables are useful when you want to maintain a value that is common to all instances of the class or when you want to keep track of some shared state.

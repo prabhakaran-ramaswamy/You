@@ -1,0 +1,105 @@
+public class DoubleForLoopExample {
+    public static void main(String[] args) {
+        // Pattern 1: Square
+        System.out.println("Pattern 1: Square");
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("----------------");
+
+        // Pattern 2: Right Triangle
+        System.out.println("Pattern 2: Right Triangle");
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("----------------");
+
+        // Pattern 3: Multiplication Table
+        System.out.println("Pattern 3: Multiplication Table");
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+In this program, we demonstrate three different patterns using nested for loops:
+
+Pattern 1: Square:
+
+This pattern prints a square made of asterisks (*) with a size of 5x5. Both the outer and inner loops run from 1 to 5, printing an asterisk in each iteration.
+Pattern 2: Right Triangle:
+
+This pattern prints a right triangle made of asterisks (*) with a height of 5. The outer loop controls the number of rows, while the inner loop controls the number of asterisks to print in each row. The number of asterisks in each row is equal to the row number.
+Pattern 3: Multiplication Table:
+
+This pattern prints a multiplication table from 1 to 10. The outer loop controls the multiplication factor (row number), while the inner loop controls the multiplier (column number). The product of the multiplication factor and the multiplier is printed in each cell, separated by a tab (\t).
+You can run this program to see the output of each pattern generated using the nested for loops.
+
+
+Pattern 1: Square:
+
+Iteration 1:
+Outer loop: i = 1
+Inner loop: j = 1, 2, 3, 4, 5
+Iteration 2:
+Outer loop: i = 2
+Inner loop: j = 1, 2, 3, 4, 5
+Iteration 3:
+Outer loop: i = 3
+Inner loop: j = 1, 2, 3, 4, 5
+Iteration 4:
+Outer loop: i = 4
+Inner loop: j = 1, 2, 3, 4, 5
+Iteration 5:
+Outer loop: i = 5
+Inner loop: j = 1, 2, 3, 4, 5
+Pattern 2: Right Triangle:
+
+Iteration 1:
+Outer loop: i = 1
+Inner loop: j = 1
+Iteration 2:
+Outer loop: i = 2
+Inner loop: j = 1, 2
+Iteration 3:
+Outer loop: i = 3
+Inner loop: j = 1, 2, 3
+Iteration 4:
+Outer loop: i = 4
+Inner loop: j = 1, 2, 3, 4
+Iteration 5:
+Outer loop: i = 5
+Inner loop: j = 1, 2, 3, 4, 5
+Pattern 3: Multiplication Table:
+
+Iteration 1:
+Outer loop: i = 1
+Inner loop: j = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Iteration 2:
+Outer loop: i = 2
+Inner loop: j = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Iteration 3:
+Outer loop: i = 3
+Inner loop: j = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Iteration 4:
+Outer loop: i = 4
+Inner loop: j = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Iteration 5:
+Outer loop: i = 5
+Inner loop: j = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Iteration 6 to 10: Similar iterations as above, with i ranging from 6 to 10.
+For each pattern, the outer loop controls the number of rows, and the inner loop controls the operations within each row. The loop variables i and j take on different values at each iteration, allowing you to perform specific operations or print different patterns based on these values.
+
+You can run the program to see the output for each pattern and observe how the values of i and j change in each iteration.

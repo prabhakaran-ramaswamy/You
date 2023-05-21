@@ -1,0 +1,44 @@
+public class ConstantsExample {
+    // Constant variables
+    public static final int MAX_SIZE = 100;
+    public static final double PI = 3.14159;
+    public static final String DEFAULT_NAME = "Unknown";
+
+    public static void main(String[] args) {
+        // Accessing constant variables
+        System.out.println("Max Size: " + MAX_SIZE);
+        System.out.println("PI: " + PI);
+        System.out.println("Default Name: " + DEFAULT_NAME);
+
+        // Attempting to modify constant variables (will result in a compile-time error)
+        // MAX_SIZE = 200;  // Error: Cannot assign a value to final variable
+        // PI = 3.14;  // Error: Cannot assign a value to final variable
+        // DEFAULT_NAME = "John";  // Error: Cannot assign a value to final variable
+    }
+}
+
+
+In this program, we have defined three constants:
+
+MAX_SIZE: Represents the maximum size, and it is an int constant with a value of 100.
+PI: Represents the value of PI, and it is a double constant with a value of 3.14159.
+DEFAULT_NAME: Represents a default name, and it is a String constant with a value of "Unknown".
+Here's how the program works:
+
+The constant variables are declared using the final keyword, indicating that their values cannot be modified once assigned.
+
+In the main method, we can directly access the constant variables using their names (MAX_SIZE, PI, and DEFAULT_NAME).
+
+We print the values of the constant variables using System.out.println() statements.
+
+Attempting to modify the constant variables by assigning new values to them will result in a compile-time error because constants cannot be reassigned.
+
+When you run this program, you will see the following output:
+
+Max Size: 100
+PI: 3.14159
+Default Name: Unknown
+
+
+Constants are useful when you want to define values that should not be modified throughout the program. By convention, constant names are usually written in uppercase letters with underscores separating words.
+

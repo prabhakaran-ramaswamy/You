@@ -1,0 +1,47 @@
+public class ContinueStatementDoubleLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                if (i == 2 && j == 2) {
+                    continue;
+                }
+                System.out.println("i: " + i + ", j: " + j);
+            }
+        }
+    }
+}
+
+
+In this program, we use a double for loop to iterate through two variables, i and j. However, when both i and j are equal to 2, we use the continue statement to skip the remaining code in the current iteration and continue with the next iteration. Here's how the program works:
+
+We define an outer for loop that initializes the loop variable i to 1, checks the condition i <= 3, and increments i by 1 after each iteration.
+
+Inside the outer loop, we define an inner for loop that initializes the loop variable j to 1, checks the condition j <= 3, and increments j by 1 after each iteration.
+
+Inside the inner loop, we check if both i and j are equal to 2 using the if statement.
+
+If both i and j are equal to 2, we encounter the continue statement. This causes the program to skip the remaining code in the current iteration of the inner loop and continue with the next iteration.
+
+If the if condition is not met, the program will execute the code inside the inner loop, which prints the values of i and j.
+
+After the inner loop finishes iterating through all values of j, the outer loop continues to the next iteration, and the process repeats.
+
+Once the outer loop finishes iterating through all values of i, the program exits the loop.
+
+When you run this program, it will iterate through both the outer and inner loops, printing the values of i and j for each iteration. However, when both i and j are equal to 2, the continue statement is encountered, and the remaining code in the current iteration of the inner loop is skipped. The program then continues with the next iteration of the inner loop.
+
+The output of the program will be:
+
+
+i: 1, j: 1
+i: 1, j: 2
+i: 1, j: 3
+i: 2, j: 1
+i: 2, j: 3
+i: 3, j: 1
+i: 3, j: 2
+i: 3, j: 3
+
+
+This program demonstrates how the continue statement can be used within a double for loop to skip the remaining code in the current iteration and proceed with the next iteration based on a certain condition. In this case, the iteration is skipped when both i and j are equal to 2.
+

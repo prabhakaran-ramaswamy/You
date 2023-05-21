@@ -1,0 +1,245 @@
+In Java, the SOLID principles are a set of design principles that aim to make software systems more maintainable, flexible, and scalable. Each principle focuses on a specific aspect of software design and promotes good practices. Here's an overview of the SOLID principles with examples in Java:
+
+1) Single Responsibility Principle (SRP):
+
+A class should have only one reason to change.
+It should have a single responsibility or purpose.
+Example:
+
+
+// Incorrect implementation
+class Employee {
+    public void saveEmployee(Employee employee) {
+        // Save employee to the database
+    }
+
+    public void calculateSalary(Employee employee) {
+        // Calculate employee's salary
+    }
+}
+
+// Correct implementation
+class EmployeeRepository {
+    public void saveEmployee(Employee employee) {
+        // Save employee to the database
+    }
+}
+
+class SalaryCalculator {
+    public void calculateSalary(Employee employee) {
+        // Calculate employee's salary
+    }
+}
+
+
+2) Open-Closed Principle (OCP):
+
+Classes should be open for extension but closed for modification.
+Existing code should not be modified when new functionality is added.
+Example:
+
+
+// Incorrect implementation
+class DiscountCalculator {
+    public double calculateDiscount(double totalPrice, String discountType) {
+        if (discountType.equals("Standard")) {
+            return totalPrice * 0.1;
+        } else if (discountType.equals("Premium")) {
+            return totalPrice * 0.2;
+        }
+        // More discount types...
+        return 0;
+    }
+}
+
+// Correct implementation
+interface Discount {
+    double calculateDiscount(double totalPrice);
+}
+
+class StandardDiscount implements Discount {
+    public double calculateDiscount(double totalPrice) {
+        return totalPrice * 0.1;
+    }
+}
+
+class PremiumDiscount implements Discount {
+    public double calculateDiscount(double totalPrice) {
+        return totalPrice * 0.2;
+    }
+}
+
+
+3) Liskov Substitution Principle (LSP):
+
+Subtypes must be substitutable for their base types.
+Derived classes should be able to replace their base classes without altering the correctness of the program.
+Example:
+
+// Incorrect implementation
+class Rectangle {
+    protected int width;
+    protected int height;
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getArea() {
+        return width * height;
+    }
+}
+
+class Square extends Rectangle {
+    public void setWidth(int width) {
+        this.width = width;
+        this.height = width;
+    }
+
+    public void setHeight(int height) {
+        this.width = height;
+        this.height = height;
+    }
+}
+
+// Correct implementation
+abstract class Shape {
+    public abstract int getArea();
+}
+
+class Rectangle extends Shape {
+    protected int width;
+    protected int height;
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getArea() {
+        return width * height;
+    }
+}
+
+class Square extends Shape {
+    private int side;
+
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    public int getArea() {
+        return side * side;
+    }
+}
+
+4) Interface Segregation Principle (ISP):
+
+Clients should not be forced to depend on interfaces they do not use.
+Classes should have precise and focused interfaces.
+Example:
+
+// Incorrect implementation
+interface Worker {
+    void work();
+    void eat();
+    void sleep();
+}
+
+class Employee implements Worker {
+    public void work() {
+        // Implementation
+    }
+
+    public void eat() {
+        // Implementation
+    }
+
+    public void sleep() {
+        // Implementation
+    }
+}
+
+// Correct implementation
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+
+interface Sleepable {
+    void sleep();
+}
+
+class Employee implements Workable, Eatable, Sleepable {
+    public void work() {
+        // Implementation
+    }
+
+    public void eat() {
+        // Implementation
+    }
+
+    public void sleep() {
+        // Implementation
+    }
+}
+
+5) Dependency Inversion Principle (DIP):
+
+High-level modules should not depend on low-level modules.
+Both should depend on abstractions.
+Example:
+
+// Incorrect implementation
+class EmailService {
+    public void sendEmail(String message, String recipient) {
+        // Implementation
+    }
+}
+
+class NotificationService {
+    private EmailService emailService;
+
+    public NotificationService() {
+        this.emailService = new EmailService();
+    }
+
+    public void sendNotification(String message, String recipient) {
+        emailService.sendEmail(message, recipient);
+    }
+}
+
+// Correct implementation
+interface MessageService {
+    void sendMessage(String message, String recipient);
+}
+
+class EmailService implements MessageService {
+    public void sendMessage(String message, String recipient) {
+        // Implementation
+    }
+}
+
+class NotificationService {
+    private MessageService messageService;
+
+    public NotificationService(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
+    public void sendNotification(String message, String recipient) {
+        messageService.sendMessage(message, recipient);
+    }
+}
+
+These examples illustrate the SOLID principles in action, promoting better software design, maintainability, and extensibility.

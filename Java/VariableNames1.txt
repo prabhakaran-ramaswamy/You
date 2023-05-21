@@ -1,0 +1,56 @@
+In Java, variable names can consist of letters (uppercase or lowercase), digits, and underscores. However, they must follow certain naming conventions. Here's an example Java program that explains the possible variable names:
+
+public class VariableNamesExample {
+    public static void main(String[] args) {
+        // Valid variable names
+        int count = 10;
+        String firstName = "John";
+        double averageScore = 85.5;
+        boolean isStudent = true;
+
+        // Invalid variable names
+        // int 123number = 123;  // Starts with a digit
+        // String my-name = "Alice";  // Contains a hyphen
+        // double average-score = 75.2;  // Contains a hyphen
+
+        // Using underscores
+        int max_value = 100;
+        int min_value = 0;
+
+        // Constants (final variables)
+        final int MAX_SIZE = 1000;
+        final double PI = 3.14159;
+
+        // Multi-word variable names (camelCase)
+        int studentCount = 20;
+        double averageTestScore = 78.9;
+        boolean hasPermissionToAccess = true;
+    }
+}
+
+
+
+In this program, we have various variable names to demonstrate the possible naming conventions:
+
+Valid Variable Names:
+
+count: Represents a numeric value.
+firstName: Represents a String value.
+averageScore: Represents a floating-point number.
+isStudent: Represents a boolean value.
+Invalid Variable Names (commented out):
+
+Variable names cannot start with a digit, such as 123number.
+Variable names cannot contain a hyphen, such as my-name or average-score.
+Using Underscores:
+
+max_value and min_value demonstrate the use of underscores in variable names.
+Constants (Final Variables):
+
+MAX_SIZE and PI are declared as constants using the final keyword.
+Multi-Word Variable Names (Camel Case):
+
+studentCount, averageTestScore, and hasPermissionToAccess demonstrate the use of camel case to improve readability in multi-word variable names.
+Note: It's important to choose meaningful and descriptive variable names that reflect the purpose and context of the variable.
+
+By following the Java naming conventions, you can create variable names that are easy to read and understand, making your code more maintainable and readable.

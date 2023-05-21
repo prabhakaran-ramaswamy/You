@@ -1,0 +1,186 @@
+public class DoubleForLoopExample {
+    public static void main(String[] args) {
+        // Example: Print a multiplication table
+        int tableSize = 5;
+
+        System.out.println("Multiplication Table:");
+        for (int i = 1; i <= tableSize; i++) {
+            for (int j = 1; j <= tableSize; j++) {
+                int product = i * j;
+                System.out.print(product + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+In this program, we use a double for loop to print a multiplication table.
+
+Initializing Variables:
+
+We declare and initialize the variable tableSize, which represents the size of the multiplication table (e.g., 5x5, 10x10).
+Double for Loop:
+
+The outer loop variable i is initialized to 1.
+The outer loop condition checks if i is less than or equal to tableSize.
+In each iteration of the outer loop, the inner for loop is executed.
+The inner loop variable j is initialized to 1.
+The inner loop condition checks if j is less than or equal to tableSize.
+In each iteration of the inner loop, the product of i and j is calculated and stored in the variable product.
+The product is then printed, followed by a tab character (\t), to create the table-like format.
+After each iteration of the inner loop, the loop variable j is incremented by 1.
+After each iteration of the outer loop, a newline character (\n) is printed to move to the next row.
+After the Double for Loop:
+
+Once the double for loop has finished executing, the program exits.
+When you run this program with tableSize = 5, it will iterate through the double for loop and print a 5x5 multiplication table.
+
+Here's the output:
+
+Multiplication Table:
+1	2	3	4	5	
+2	4	6	8	10	
+3	6	9	12	15	
+4	8	12	16	20	
+5	10	15	20	25	
+
+
+The double for loop iterates over each row and column of the multiplication table. The variables i and j represent the row and column numbers, respectively. The product of i and j is calculated and printed at each cell of the table.
+
+This example demonstrates how a double for loop can be used to perform nested iterations and handle two-dimensional scenarios, such as generating a multiplication table or processing matrices.
+
+
+
+Outer Loop Iteration 1:
+
+i = 1
+Inner Loop Iteration 1:
+j = 1
+product = 1 * 1 = 1
+Output: 1
+Inner Loop Iteration 2:
+j = 2
+product = 1 * 2 = 2
+Output: 2
+Inner Loop Iteration 3:
+j = 3
+product = 1 * 3 = 3
+Output: 3
+Inner Loop Iteration 4:
+j = 4
+product = 1 * 4 = 4
+Output: 4
+Inner Loop Iteration 5:
+j = 5
+product = 1 * 5 = 5
+Output: 5
+Newline Output: Moves to the next row
+Outer Loop Iteration 2:
+
+i = 2
+Inner Loop Iteration 1:
+j = 1
+product = 2 * 1 = 2
+Output: 2
+Inner Loop Iteration 2:
+j = 2
+product = 2 * 2 = 4
+Output: 4
+Inner Loop Iteration 3:
+j = 3
+product = 2 * 3 = 6
+Output: 6
+Inner Loop Iteration 4:
+j = 4
+product = 2 * 4 = 8
+Output: 8
+Inner Loop Iteration 5:
+j = 5
+product = 2 * 5 = 10
+Output: 10
+Newline Output: Moves to the next row
+Outer Loop Iteration 3:
+
+i = 3
+Inner Loop Iteration 1:
+j = 1
+product = 3 * 1 = 3
+Output: 3
+Inner Loop Iteration 2:
+j = 2
+product = 3 * 2 = 6
+Output: 6
+Inner Loop Iteration 3:
+j = 3
+product = 3 * 3 = 9
+Output: 9
+Inner Loop Iteration 4:
+j = 4
+product = 3 * 4 = 12
+Output: 12
+Inner Loop Iteration 5:
+j = 5
+product = 3 * 5 = 15
+Output: 15
+Newline Output: Moves to the next row
+Outer Loop Iteration 4:
+
+i = 4
+Inner Loop Iteration 1:
+j = 1
+product = 4 * 1 = 4
+Output: 4
+Inner Loop Iteration 2:
+j = 2
+product = 4 * 2 = 8
+Output: 8
+Inner Loop Iteration 3:
+j = 3
+product = 4 * 3 = 12
+Output: 12
+Inner Loop Iteration 4:
+j = 4
+product = 4 * 4 = 16
+Output: 16
+Inner Loop Iteration 5:
+j = 5
+product = 4 * 5 = 20
+Output: 20
+Newline Output: Moves to the next row
+Outer Loop Iteration 5:
+
+i = 5
+Inner Loop Iteration 1:
+j = 1
+product = 5 * 1 = 5
+Output: 5
+Inner Loop Iteration 2:
+j = 2
+product = 5 * 2 = 10
+Output: 10
+Inner Loop Iteration 3:
+j = 3
+product = 5 * 3 = 15
+Output: 15
+Inner Loop Iteration 4:
+j = 4
+product = 5 * 4 = 20
+Output: 20
+Inner Loop Iteration 5:
+j = 5
+product = 5 * 5 = 25
+Output: 25
+Newline Output: Moves to the next row
+After all the iterations, the program will print a 5x5 multiplication table as follows:
+
+1  2  3  4  5
+2  4  6  8  10
+3  6  9  12 15
+4  8  12 16 20
+5  10 15 20 25
+
+Each iteration of the outer and inner loops calculates the product of i and j, representing the cell value of the multiplication table, and prints it. The newline character (\n) is used to move to the next row after each iteration of the outer loop.
+
+This example demonstrates how a double for loop can be used to perform nested iterations and handle two-dimensional scenarios, such as generating multiplication tables or processing matrices.
+

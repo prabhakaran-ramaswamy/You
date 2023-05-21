@@ -1,0 +1,37 @@
+public class BreakStatementExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.println("Iteration: " + i);
+        }
+        System.out.println("Loop has ended.");
+    }
+}
+
+
+In this program, we use a for loop to iterate from 1 to 10. However, when the loop variable i reaches the value of 5, we use the break statement to terminate the loop. Here's how the program works:
+
+We define a for loop that initializes the loop variable i to 1, checks the condition i <= 10, and increments i by 1 after each iteration.
+
+Inside the loop, we check if the value of i is equal to 5 using the if statement.
+
+If i is equal to 5, we encounter the break statement. This causes the program to immediately exit the loop and continue with the next statement after the loop.
+
+If the if condition is not met (i.e., i is not equal to 5), the program will execute the code inside the loop, which prints the iteration number.
+
+After the loop ends or is terminated by the break statement, the program continues with the next statement, which prints "Loop has ended."
+
+When you run this program, it will iterate from 1 to 10, printing the iteration number for each iteration. However, when i reaches 5, the loop will be terminated due to the break statement. The program will then print "Loop has ended."
+
+The output of the program will be:
+
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Loop has ended.
+
+This program demonstrates how the break statement can be used within a loop to prematurely terminate its execution based on a certain condition. In this case, the loop is terminated when the value of i is equal to 5.
+

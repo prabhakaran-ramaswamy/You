@@ -1,0 +1,82 @@
+public class PrimitiveDataTypesExample {
+    public static void main(String[] args) {
+        // Integer types
+        byte byteValue = 127;
+        short shortValue = 32767;
+        int intValue = 2147483647;
+        long longValue = 9223372036854775807L;
+
+        // Floating-point types
+        float floatValue = 3.14159f;
+        double doubleValue = 3.141592653589793;
+
+        // Character type
+        char charValue = 'A';
+
+        // Boolean type
+        boolean booleanValue = true;
+
+        System.out.println("Byte Value: " + byteValue);
+        System.out.println("Short Value: " + shortValue);
+        System.out.println("Int Value: " + intValue);
+        System.out.println("Long Value: " + longValue);
+        System.out.println("Float Value: " + floatValue);
+        System.out.println("Double Value: " + doubleValue);
+        System.out.println("Char Value: " + charValue);
+        System.out.println("Boolean Value: " + booleanValue);
+    }
+}
+
+
+
+Certainly! Here's an example of a Java program that demonstrates the usage of various primitive data types:
+
+java
+Copy code
+public class PrimitiveDataTypesExample {
+    public static void main(String[] args) {
+        // Integer types
+        byte byteValue = 127;
+        short shortValue = 32767;
+        int intValue = 2147483647;
+        long longValue = 9223372036854775807L;
+
+        // Floating-point types
+        float floatValue = 3.14159f;
+        double doubleValue = 3.141592653589793;
+
+        // Character type
+        char charValue = 'A';
+
+        // Boolean type
+        boolean booleanValue = true;
+
+        System.out.println("Byte Value: " + byteValue);
+        System.out.println("Short Value: " + shortValue);
+        System.out.println("Int Value: " + intValue);
+        System.out.println("Long Value: " + longValue);
+        System.out.println("Float Value: " + floatValue);
+        System.out.println("Double Value: " + doubleValue);
+        System.out.println("Char Value: " + charValue);
+        System.out.println("Boolean Value: " + booleanValue);
+    }
+}
+In this program, we declare variables of various primitive data types and assign them some sample values. Here's a breakdown of the primitive data types used:
+
+Integer types:
+
+byte: 8-bit signed integer, ranging from -128 to 127.
+short: 16-bit signed integer, ranging from -32,768 to 32,767.
+int: 32-bit signed integer, ranging from -2,147,483,648 to 2,147,483,647.
+long: 64-bit signed integer, ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+Floating-point types:
+
+float: 32-bit floating-point number, ranging from approximately ±1.4 x 10^-45 to ±3.4 x 10^38 with a precision of 7 digits.
+double: 64-bit floating-point number, ranging from approximately ±4.9 x 10^-324 to ±1.8 x 10^308 with a precision of 15 digits.
+Character type:
+
+char: 16-bit Unicode character, representing a single character.
+Boolean type:
+
+boolean: Represents a truth value, either true or false.
+The program then prints out the values of each variable. You can run this program to see the values assigned to different primitive data types in Java.

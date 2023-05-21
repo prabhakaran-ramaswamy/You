@@ -1,0 +1,76 @@
+public class ForLoopExample {
+    public static void main(String[] args) {
+        // Example: Sum of numbers from 1 to 10
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            sum += i;
+        }
+
+        System.out.println("Sum of numbers from 1 to 10: " + sum);
+    }
+}
+
+
+In this program, we calculate the sum of numbers from 1 to 10 using a for loop.
+
+Initializing Variables:
+
+We declare and initialize the variable sum to 0. This variable will store the sum of numbers.
+for Loop:
+
+The loop variable i is initialized to 1.
+The loop condition checks if i is less than or equal to 10.
+In each iteration, the code block inside the loop is executed, which adds the value of i to the sum.
+After each iteration, the loop variable i is incremented by 1.
+After the for Loop:
+
+Once the loop has finished executing, we print the final value of sum, which represents the sum of numbers from 1 to 10.
+When you run this program, it will calculate the sum of numbers from 1 to 10 using a for loop and print the result as output.
+
+In this example, the loop variable i takes on values from 1 to 10 in each iteration of the loop. The value of i is used to perform the addition operation and update the sum variable.
+
+Iteration 1:
+
+i = 1
+sum = 0 + 1 = 1
+Iteration 2:
+
+i = 2
+sum = 1 + 2 = 3
+Iteration 3:
+
+i = 3
+sum = 3 + 3 = 6
+Iteration 4:
+
+i = 4
+sum = 6 + 4 = 10
+Iteration 5:
+
+i = 5
+sum = 10 + 5 = 15
+Iteration 6:
+
+i = 6
+sum = 15 + 6 = 21
+Iteration 7:
+
+i = 7
+sum = 21 + 7 = 28
+Iteration 8:
+
+i = 8
+sum = 28 + 8 = 36
+Iteration 9:
+
+i = 9
+sum = 36 + 9 = 45
+Iteration 10:
+
+i = 10
+sum = 45 + 10 = 55
+After the loop finishes executing, the value of sum will be the sum of numbers from 1 to 10, which is 55.
+
+Each iteration of the loop increments the loop variable i by 1 and adds the value of i to the sum variable. This process is repeated until the loop condition becomes false, which occurs when i is no longer less than or equal to 10.
+
+The final value of sum represents the sum of numbers from 1 to 10, calculated using the for loop.

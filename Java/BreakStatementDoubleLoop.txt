@@ -1,0 +1,43 @@
+public class BreakStatementDoubleLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                if (i == 2 && j == 2) {
+                    break;
+                }
+                System.out.println("i: " + i + ", j: " + j);
+            }
+        }
+        System.out.println("Double loop has ended.");
+    }
+}
+
+
+In this program, we use a double for loop to iterate through two variables, i and j. However, when both i and j equal 2, we use the break statement to terminate the inner loop. Here's how the program works:
+
+We define an outer for loop that initializes the loop variable i to 1, checks the condition i <= 3, and increments i by 1 after each iteration.
+
+Inside the outer loop, we define an inner for loop that initializes the loop variable j to 1, checks the condition j <= 3, and increments j by 1 after each iteration.
+
+Inside the inner loop, we check if both i and j are equal to 2 using the if statement.
+
+If both i and j are equal to 2, we encounter the break statement. This causes the inner loop to be terminated, and the program continues with the next iteration of the outer loop.
+
+If the if condition is not met, the program will execute the code inside the inner loop, which prints the values of i and j.
+
+After the inner loop finishes or is terminated by the break statement, the outer loop continues to the next iteration, and the process repeats.
+
+Once the outer loop finishes iterating through all values of i, the program continues with the next statement, which prints "Double loop has ended."
+
+When you run this program, it will iterate through both the outer and inner loops, printing the values of i and j for each iteration. However, when both i and j are equal to 2, the inner loop will be terminated by the break statement. The program will then continue with the next iteration of the outer loop.
+
+The output of the program will be:
+
+i: 1, j: 1
+i: 1, j: 2
+i: 1, j: 3
+i: 2, j: 1
+Double loop has ended.
+
+This program demonstrates how the break statement can be used within a double for loop to prematurely terminate the inner loop based on a certain condition. In this case, the inner loop is terminated when both i and j are equal to 2.
+
