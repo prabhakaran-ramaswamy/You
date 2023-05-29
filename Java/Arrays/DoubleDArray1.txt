@@ -1,0 +1,64 @@
+public class DoubleDArrayExample {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array of integers
+        int[][] matrix = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
+        };
+
+        // Access and print array elements
+        System.out.println("Array elements:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+This program declares and initializes a two-dimensional array called matrix with integer values. The matrix array represents a 3x3 grid with rows and columns.
+
+To access and print the elements of the array, we use nested for loops. The outer loop iterates over the rows of the array (matrix.length), and the inner loop iterates over the columns of each row (matrix[i].length).
+
+Inside the nested loops, the statement System.out.print(matrix[i][j] + " "); prints each element of the array with a space. After printing the elements of each row, System.out.println(); is used to move to the next line.
+
+The output of the program will display the elements of the two-dimensional array in a grid-like format:
+
+Array elements:
+1 2 3 
+4 5 6 
+7 8 9 
+
+
+By utilizing nested loops, this program effectively accesses and prints the elements of a two-dimensional array.
+
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+
+
+Here's how the iteration works in this context:
+
+Outer Loop (rows):
+
+Initialization: int i = 0: The variable i is initialized with the value 0, representing the index of the first row.
+Condition: i < matrix.length: The condition is checked before each iteration. As long as i is less than the number of rows in the matrix array (matrix.length), the outer loop will continue executing.
+Increment: i++: After each iteration, the variable i is incremented by 1, allowing us to move to the next row.
+Inner Loop (columns):
+
+Initialization: int j = 0: The variable j is initialized with the value 0, representing the index of the first column.
+Condition: j < matrix[i].length: The condition is checked before each iteration. As long as j is less than the number of columns in the current row of the matrix array (matrix[i].length), the inner loop will continue executing.
+Increment: j++: After each iteration, the variable j is incremented by 1, allowing us to move to the next column in the current row.
+Body: System.out.print(matrix[i][j] + " ");: This statement accesses and prints the element at the current row (i) and column (j) of the matrix array. The element is followed by a space to separate it from the next element in the same row.
+
+Line Break: System.out.println();: After printing all the elements of a row, this statement is used to move to the next line, creating the grid-like format of the array.
+
+By using nested loops, we can iterate over each element in the two-dimensional array. The outer loop iterates over the rows, and the inner loop iterates over the columns of each row. This allows us to access and perform operations on each element individually.
+
+In the given example, the program prints the elements of the two-dimensional array in a grid-like format. However, you can modify the body of the inner loop to perform other operations or calculations on the array elements according to your requirements.

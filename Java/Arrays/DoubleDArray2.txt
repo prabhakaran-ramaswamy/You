@@ -1,0 +1,88 @@
+public class DoubleDArrayExample2 {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array of integers
+        int[][] matrix = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
+        };
+
+        // Calculate the transpose of the matrix
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+
+        int[][] transpose = new int[columns][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                transpose[j][i] = matrix[i][j];
+            }
+        }
+
+        // Print the original matrix
+        System.out.println("Original Matrix:");
+        printMatrix(matrix);
+
+        // Print the transpose of the matrix
+        System.out.println("Transpose Matrix:");
+        printMatrix(transpose);
+    }
+
+    // Utility method to print a matrix
+    public static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+}
+
+
+In this program, we have a two-dimensional array called matrix that represents a 3x3 grid with rows and columns. The goal is to calculate the transpose of the matrix.
+
+To calculate the transpose, we create a new two-dimensional array called transpose. The dimensions of the transpose array are swapped compared to the matrix array. The number of rows in transpose is equal to the number of columns in matrix, and the number of columns in transpose is equal to the number of rows in matrix.
+
+Using nested for loops, we iterate over the elements of the matrix array. The i loop variable represents the rows, and the j loop variable represents the columns. The element at matrix[i][j] is assigned to transpose[j][i] to calculate the transpose.
+
+After calculating the transpose, the program prints both the original matrix and the transpose matrix using the printMatrix() utility method.
+
+The printMatrix() method is a helper utility that takes a two-dimensional array as input and prints its elements in a grid-like format. It uses nested loops to iterate over the rows and columns of the array and prints each element followed by a space. After printing all the elements of a row, it moves to the next line using System.out.println().
+
+By utilizing nested loops and a new array, this program effectively calculates and displays the transpose of a given matrix.
+
+
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+        transpose[j][i] = matrix[i][j];
+    }
+}
+
+
+Here's how the iteration works in this context:
+
+Outer Loop (rows):
+
+Initialization: int i = 0: The variable i is initialized with the value 0, representing the index of the first row of the matrix array.
+Condition: i < rows: The condition is checked before each iteration. As long as i is less than the number of rows in the matrix array (rows), the outer loop will continue executing.
+Increment: i++: After each iteration, the variable i is incremented by 1, allowing us to move to the next row.
+Inner Loop (columns):
+
+Initialization: int j = 0: The variable j is initialized with the value 0, representing the index of the first column of the matrix array.
+Condition: j < columns: The condition is checked before each iteration. As long as j is less than the number of columns in the matrix array (columns), the inner loop will continue executing.
+Increment: j++: After each iteration, the variable j is incremented by 1, allowing us to move to the next column in the current row.
+Body: transpose[j][i] = matrix[i][j];: This statement assigns the value of the element at index [i][j] of the matrix array to the element at index [j][i] of the transpose array. By swapping the row and column indices, we effectively calculate the transpose of the matrix.
+
+The i index corresponds to the row of the matrix array, and the j index corresponds to the column of the matrix array.
+The j index corresponds to the row of the transpose array, and the i index corresponds to the column of the transpose array.
+By swapping the row and column indices, we transpose the elements from the matrix array to the transpose array.
+By using nested loops, we can iterate over each element in the two-dimensional array. The outer loop iterates over the rows, and the inner loop iterates over the columns of each row. This allows us to access and perform operations on each element individually.
+
+In the given example, the program calculates the transpose of the matrix by swapping the row and column indices of the elements. The resulting transpose matrix is stored in the transpose array.
+
+The printMatrix() method is a utility method that iterates over the rows and columns of a matrix and prints each element. It is used to print both the original matrix and the transpose matrix in a grid-like format.
+
+By utilizing nested loops and index swapping, this program effectively calculates and displays the transpose of a given matrix.
+
