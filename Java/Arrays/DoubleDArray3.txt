@@ -1,0 +1,96 @@
+public class DoubleDArrayExample3 {
+    public static void main(String[] args) {
+        // Declare and initialize a 2D array of integers
+        int[][] matrix = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
+        };
+
+        // Calculate the sum of each row
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+
+        int[] rowSums = new int[rows];
+
+        for (int i = 0; i < rows; i++) {
+            int sum = 0;
+            for (int j = 0; j < columns; j++) {
+                sum += matrix[i][j];
+            }
+            rowSums[i] = sum;
+        }
+
+        // Print the row sums
+        System.out.println("Row Sums:");
+        for (int i = 0; i < rows; i++) {
+            System.out.println("Row " + (i + 1) + ": " + rowSums[i]);
+        }
+    }
+}
+
+
+In this program, we have a two-dimensional array called matrix that represents a 3x3 grid with rows and columns. The goal is to calculate the sum of each row in the matrix.
+
+To calculate the sum of each row, we create a new one-dimensional array called rowSums. The size of the rowSums array is equal to the number of rows in the matrix array.
+
+Using nested for loops, we iterate over the elements of the matrix array. The outer loop iterates over the rows, and the inner loop iterates over the columns of each row. For each row, we calculate the sum by adding up all the elements.
+
+After calculating the sum of each row, we store the sum in the corresponding index of the rowSums array.
+
+Finally, we print the row sums using a separate loop. We iterate over the rowSums array and print the sum of each row along with the row number.
+
+The output of the program will display the sums of each row in the matrix:
+
+Row Sums:
+Row 1: 6
+Row 2: 15
+Row 3: 24
+
+
+By utilizing nested loops and a separate array, this program effectively calculates and displays the sums of each row in a given matrix.
+
+
+for (int i = 0; i < rows; i++) {
+    int sum = 0;
+    for (int j = 0; j < columns; j++) {
+        sum += matrix[i][j];
+    }
+    rowSums[i] = sum;
+}
+
+
+Here's how the iteration works in this context:
+
+Outer Loop (rows):
+
+Initialization: int i = 0: The variable i is initialized with the value 0, representing the index of the first row of the matrix array.
+Condition: i < rows: The condition is checked before each iteration. As long as i is less than the number of rows in the matrix array (rows), the outer loop will continue executing.
+Increment: i++: After each iteration, the variable i is incremented by 1, allowing us to move to the next row.
+Inner Loop (columns):
+
+Initialization: Not applicable. The j loop variable is defined outside the inner loop.
+Condition: j < columns: The condition is checked before each iteration. As long as j is less than the number of columns in the matrix array (columns), the inner loop will continue executing.
+Increment: Not applicable. The j loop variable is incremented within the loop body.
+Body:
+
+Calculation: sum += matrix[i][j];: This statement adds the value of the element at index [i][j] of the matrix array to the sum variable. It calculates the sum of the elements in the current row of the matrix.
+
+The i index corresponds to the current row of the matrix array.
+
+The j index corresponds to the current column of the matrix array.
+
+By iterating over the columns and adding each element to the sum variable, we calculate the sum of the elements in the current row.
+
+Assigning the sum to the rowSums array: rowSums[i] = sum;
+
+After calculating the sum of the current row, we store the sum in the corresponding index i of the rowSums array.
+This allows us to keep track of the sums of each row separately.
+By using nested loops, we can iterate over each element in the two-dimensional array. The outer loop iterates over the rows, and the inner loop iterates over the columns of each row. This allows us to access and perform operations on each element individually.
+
+In the given example, the program calculates the sum of each row in the matrix by iterating over the elements row by row. The sums are stored in the rowSums array.
+
+After calculating the sums, a separate loop is used to print the sums of each row along with the row number.
+
+By utilizing nested loops and separate variables, this program effectively calculates and displays the sums of each row in a given matrix.
+
