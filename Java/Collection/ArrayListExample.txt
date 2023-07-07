@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of Strings
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Accessing elements in the ArrayList
+        System.out.println("First fruit: " + fruits.get(0));
+        System.out.println("Second fruit: " + fruits.get(1));
+
+        // Modifying an element
+        fruits.set(2, "Mango");
+        System.out.println("Updated third fruit: " + fruits.get(2));
+
+        // Removing an element
+        fruits.remove(1);
+        System.out.println("After removing the second fruit: " + fruits);
+
+        // Checking if an element exists
+        boolean containsApple = fruits.contains("Apple");
+        System.out.println("Does the list contain Apple? " + containsApple);
+
+        // Getting the size of the ArrayList
+        int size = fruits.size();
+        System.out.println("Size of the list: " + size);
+
+        // Iterating over the ArrayList
+        System.out.println("Fruits in the list:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        // Clearing the ArrayList
+        fruits.clear();
+        System.out.println("After clearing the list: " + fruits);
+    }
+}
+
+
+Explanation:
+
+First, we import the ArrayList class from the java.util package.
+Inside the main method, we create an ArrayList called fruits to store strings.
+We add elements to the ArrayList using the add method. In this case, we add "Apple", "Banana", and "Orange".
+We access elements in the ArrayList using the get method, passing the index of the element we want to retrieve.
+We modify an element in the ArrayList using the set method, providing the index and the new value.
+We remove an element from the ArrayList using the remove method, passing the index of the element to be removed.
+We check if an element exists in the ArrayList using the contains method.
+We get the size of the ArrayList using the size method.
+We iterate over the ArrayList using a for-each loop and print each element.
+We clear the ArrayList using the clear method, removing all elements from it.
+The output of this program would be:
+
+
+First fruit: Apple
+Second fruit: Banana
+Updated third fruit: Mango
+After removing the second fruit: [Apple, Mango]
+Does the list contain Apple? true
+Size of the list: 2
+Fruits in the list:
+Apple
+Mango
+After clearing the list: []

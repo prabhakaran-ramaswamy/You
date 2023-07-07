@@ -1,0 +1,95 @@
+import java.util.ArrayList;
+
+public class ArrayListPersonExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of Person objects
+        ArrayList<Person> persons = new ArrayList<>();
+
+        // Create Person objects
+        Person person1 = new Person("John", 25);
+        Person person2 = new Person("Jane", 30);
+        Person person3 = new Person("Mike", 28);
+
+        // Add Person objects to the ArrayList
+        persons.add(person1);
+        persons.add(person2);
+        persons.add(person3);
+
+        // Accessing elements in the ArrayList
+        System.out.println("First person: " + persons.get(0));
+        System.out.println("Second person: " + persons.get(1));
+
+        // Modifying an element
+        Person newPerson = new Person("Sarah", 32);
+        persons.set(2, newPerson);
+        System.out.println("Updated third person: " + persons.get(2));
+
+        // Removing an element
+        persons.remove(1);
+        System.out.println("After removing the second person: " + persons);
+
+        // Checking if an element exists
+        boolean containsPerson = persons.contains(person1);
+        System.out.println("Does the list contain John? " + containsPerson);
+
+        // Getting the size of the ArrayList
+        int size = persons.size();
+        System.out.println("Size of the list: " + size);
+
+        // Iterating over the ArrayList
+        System.out.println("People in the list:");
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+
+        // Clearing the ArrayList
+        persons.clear();
+        System.out.println("After clearing the list: " + persons);
+    }
+}
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+
+We create a custom Person class with name and age as attributes.
+Inside the main method, we create an ArrayList called persons to store objects of the Person class.
+We create three Person objects with different names and ages.
+We add these Person objects to the ArrayList using the add method.
+We access elements in the ArrayList using the get method, passing the index of the element.
+We modify an element by creating a new Person object and using the set method to replace an existing element.
+We remove an element from the ArrayList using the remove method, passing the index of the element to be removed.
+We check if an element exists in the ArrayList using the contains method.
+We get the size of the ArrayList using the size method.
+We iterate over the ArrayList using a for-each loop and print each Person object.
+We clear the ArrayList using the clear method, removing all elements from it.
+The output of this program would be:
+
+
+First person: Person{name='John', age=25}
+Second person: Person{name='Jane', age=30}
+Updated third person: Person{name='Sarah', age=32}
+After removing the second person: [Person{name='John', age=25}, Person{name='Sarah', age=32}]
+Does the list contain John? true
+Size of the list: 2
+People in the list:
+Person{name='John', age=25}
+Person{name='Sarah', age=32}
+After clearing the list: []
+
+This example demonstrates using an ArrayList to store and manipulate objects of a custom Person class. It showcases how to add, modify, remove, and access objects within the ArrayList based on their index. Additionally, it illustrates the usage of contains, size, and clear methods with custom objects.
