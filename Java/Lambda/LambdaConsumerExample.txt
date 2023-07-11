@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class LambdaConsumerExample {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+        
+        // Using a lambda expression with Consumer to print each name
+        Consumer<String> namePrinter = name -> System.out.println(name);
+        
+        // Iterate over the list of names and apply the Consumer to each name
+        names.forEach(namePrinter);
+    }
+}
+
+
+In this example, we have a list of names (names) and we want to print each name using a lambda expression and the Consumer functional interface.
+
+We define a lambda expression called namePrinter that accepts a single argument of type String (representing a name) and uses the System.out.println() method to print the name.
+
+Then, we use the forEach() method provided by the List interface to iterate over each element in the names list and apply the namePrinter lambda expression to each name. This effectively prints each name in the list.
+
+When you run this code, it will output:
+
+
+Alice
+Bob
+Charlie
+
+The lambda expression namePrinter acts as a callback that is executed for each element in the list, allowing us to perform some operation (in this case, printing) on each element without explicitly writing a loop.
+

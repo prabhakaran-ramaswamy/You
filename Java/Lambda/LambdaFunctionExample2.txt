@@ -1,0 +1,30 @@
+@FunctionalInterface
+interface TriFunction<T, U, V, R> {
+    R apply(T t, U u, V v);
+}
+
+public class LambdaFunctionMultipleArgsExample {
+    public static void main(String[] args) {
+        // Using a custom functional interface to calculate the sum of three integers
+        TriFunction<Integer, Integer, Integer, Integer> sumCalculator = (a, b, c) -> a + b + c;
+        
+        // Apply the function to three integers
+        int result = sumCalculator.apply(1, 2, 3);
+        
+        System.out.println("Sum: " + result);
+    }
+}
+
+
+In this example, we create a custom functional interface TriFunction that accepts three input arguments (T, U, and V) and produces a result (R). We annotate the interface with @FunctionalInterface to ensure it is a valid functional interface.
+
+We then define a lambda expression using the custom functional interface TriFunction to calculate the sum of three integers (a, b, and c).
+
+Finally, we apply the lambda expression to three integers (1, 2, and 3) using the apply method defined in the custom functional interface and print the result.
+
+When you run this code, it will output:
+
+Sum: 6
+
+Note that if you need to work with more arguments, you can define additional functional interfaces like QuadFunction, QuintFunction, and so on, or adjust the arity of the custom functional interface to suit your specific requirements.
+

@@ -1,0 +1,129 @@
+1) Integer: The Integer class is used to wrap the int primitive type.
+
+// Creating an Integer object
+Integer number = new Integer(10);
+
+// Converting int to Integer
+int primitiveInt = 5;
+Integer wrappedInt = Integer.valueOf(primitiveInt);
+
+// Converting Integer to int
+int unwrappedInt = wrappedInt.intValue();
+
+// Performing operations with Integer
+Integer sum = wrappedInt + number;
+System.out.println(sum);
+
+2)Double: The Double class is used to wrap the double primitive type.
+
+// Creating a Double object
+Double decimal = new Double(3.14);
+
+// Converting double to Double
+double primitiveDouble = 2.71;
+Double wrappedDouble = Double.valueOf(primitiveDouble);
+
+// Converting Double to double
+double unwrappedDouble = wrappedDouble.doubleValue();
+
+// Performing operations with Double
+Double product = wrappedDouble * decimal;
+System.out.println(product);
+
+3)Boolean: The Boolean class is used to wrap the boolean primitive type.
+
+// Creating a Boolean object
+Boolean flag = new Boolean(true);
+
+// Converting boolean to Boolean
+boolean primitiveBoolean = false;
+Boolean wrappedBoolean = Boolean.valueOf(primitiveBoolean);
+
+// Converting Boolean to boolean
+boolean unwrappedBoolean = wrappedBoolean.booleanValue();
+
+// Performing operations with Boolean
+Boolean result = wrappedBoolean && flag;
+System.out.println(result);
+
+4) Character: The Character class is used to wrap the char primitive type.
+
+// Creating a Character object
+Character letter = new Character('A');
+
+// Converting char to Character
+char primitiveChar = 'B';
+Character wrappedChar = Character.valueOf(primitiveChar);
+
+// Converting Character to char
+char unwrappedChar = wrappedChar.charValue();
+
+// Performing operations with Character
+Character nextLetter = ++wrappedChar;
+System.out.println(nextLetter);
+
+5) Byte wrapper class in Java:
+
+// Creating a Byte object
+Byte number = new Byte((byte) 127);
+
+// Converting byte to Byte
+byte primitiveByte = -128;
+Byte wrappedByte = Byte.valueOf(primitiveByte);
+
+// Converting Byte to byte
+byte unwrappedByte = wrappedByte.byteValue();
+
+// Performing operations with Byte
+Byte sum = (byte) (wrappedByte + number);
+System.out.println(sum);
+
+6) Short wrapper class in Java:
+ // Creating a Short object
+Short number = new Short((short) 100);
+
+// Converting short to Short
+short primitiveShort = -200;
+Short wrappedShort = Short.valueOf(primitiveShort);
+
+// Converting Short to short
+short unwrappedShort = wrappedShort.shortValue();
+
+// Performing operations with Short
+Short sum = (short) (wrappedShort + number);
+System.out.println(sum);
+
+7) Long wrapper class in Java:
+
+// Creating a Long object
+Long number = new Long(1000000000L);
+
+// Converting long to Long
+long primitiveLong = -2000000000L;
+Long wrappedLong = Long.valueOf(primitiveLong);
+
+// Converting Long to long
+long unwrappedLong = wrappedLong.longValue();
+
+// Performing operations with Long
+Long sum = wrappedLong + number;
+System.out.println(sum);
+
+
+8) Float wrapper class in Java:
+
+  // Creating a Float object
+Float number = new Float(3.14f);
+
+// Converting float to Float
+float primitiveFloat = 2.71f;
+Float wrappedFloat = Float.valueOf(primitiveFloat);
+
+// Converting Float to float
+float unwrappedFloat = wrappedFloat.floatValue();
+
+// Performing operations with Float
+Float product = wrappedFloat * number;
+System.out.println(product);
+
+

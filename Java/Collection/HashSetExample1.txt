@@ -1,0 +1,53 @@
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        // Create a HashSet to store integers
+        HashSet<Integer> numbers = new HashSet<>();
+
+        // Add elements to the HashSet
+        numbers.add(10);
+        numbers.add(5);
+        numbers.add(8);
+        numbers.add(3);
+        numbers.add(15);
+
+        // Display the HashSet
+        System.out.println("HashSet: " + numbers);
+
+        // Check if the HashSet contains a specific element
+        int searchNumber = 5;
+        if (numbers.contains(searchNumber)) {
+            System.out.println(searchNumber + " is found in the HashSet.");
+        } else {
+            System.out.println(searchNumber + " is not found in the HashSet.");
+        }
+
+        // Remove an element from the HashSet
+        int removeNumber = 8;
+        if (numbers.remove(removeNumber)) {
+            System.out.println(removeNumber + " is removed from the HashSet.");
+        } else {
+            System.out.println(removeNumber + " is not found in the HashSet.");
+        }
+
+        // Display the updated HashSet
+        System.out.println("Updated HashSet: " + numbers);
+    }
+}
+
+Output:
+
+
+HashSet: [3, 5, 8, 10, 15]
+5 is found in the HashSet.
+8 is removed from the HashSet.
+Updated HashSet: [3, 5, 10, 15]
+
+In the example above, we create a HashSet called numbers to store integer values. We add several integers using the add() method, and then we print the HashSet to see the elements stored in it.
+
+Next, we check if the HashSet contains a specific number using the contains() method. If the number is found, we print a message indicating that it's present; otherwise, we print a message stating that it's not found.
+
+After that, we remove a number from the HashSet using the remove() method, and we print a message indicating whether the removal was successful or not.
+
+Finally, we print the updated HashSet to see the elements remaining after the removal.

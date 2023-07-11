@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    
+    public static void main(String[] args) {
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Person("John", 25));
+        persons.add(new Person("Alice", 30));
+        persons.add(new Person("Bob", 20));
+
+        // Sort the list based on age using lambda expression
+        Collections.sort(persons, (p1, p2) -> Integer.compare(p1.getAge(), p2.getAge()));
+
+        for (Person person : persons) {
+            System.out.println(person.getName() + " - " + person.getAge());
+        }
+    }
+}
+
+
+In the main method, we create a list of Person objects and add three instances with different ages. Then, we use Collections.sort and pass a lambda expression as the comparator. The lambda expression compares two Person objects based on their ages using Integer.compare.
+
+When you run this code, it will output the following:
+
+Bob - 20
+John - 25
+Alice - 30
+
+As you can see, the list is sorted in ascending order based on the ages of the persons using the lambda expression as the comparator.

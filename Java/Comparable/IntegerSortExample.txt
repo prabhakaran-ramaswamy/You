@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class IntegerSortExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(5);
+        numbers.add(20);
+        numbers.add(15);
+
+        Collections.sort(numbers);
+
+        for (Integer number : numbers) {
+            System.out.println(number);
+        }
+    }
+}
+
+
+In this example, we have a list of integers (ArrayList<Integer>) that contains four numbers: 10, 5, 20, and 15. We use Collections.sort to sort the integers in ascending order based on their natural ordering.
+
+When you run this code, it will output the following:
+
+5
+10
+15
+20
+
+5
+10
+15
+20
+

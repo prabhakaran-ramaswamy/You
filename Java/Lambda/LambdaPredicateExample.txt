@@ -1,0 +1,47 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class LambdaPredicateExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        
+        // Using a lambda expression with Predicate to filter even numbers
+        Predicate<Integer> isEven = num -> num % 2 == 0;
+        
+        // Filter the list of numbers using the Predicate
+        List<Integer> evenNumbers = filterNumbers(numbers, isEven);
+        
+        System.out.println("Even numbers: " + evenNumbers);
+    }
+    
+    public static List<Integer> filterNumbers(List<Integer> numbers, Predicate<Integer> predicate) {
+        // Create a new list to store the filtered numbers
+        List<Integer> filteredNumbers = new ArrayList<>();
+        
+        // Iterate over the numbers and apply the Predicate to each number
+        for (Integer number : numbers) {
+            if (predicate.test(number)) {
+                filteredNumbers.add(number);
+            }
+        }
+        
+        return filteredNumbers;
+    }
+}
+
+
+In this example, we have a list of numbers (numbers) and we want to filter out the even numbers using a lambda expression and the Predicate functional interface.
+
+We define a lambda expression called isEven that accepts a single argument of type Integer (representing a number) and checks if it is even by using the modulo operator %. The lambda expression returns a boolean value.
+
+Then, we use the filterNumbers() method to filter the list of numbers. This method takes the list of numbers and a Predicate as arguments. It iterates over each number in the list and applies the Predicate to each number. If the Predicate returns true for a number, it is added to a new list called filteredNumbers.
+
+Finally, we print the list of even numbers to the console.
+
+When you run this code, it will output:
+
+
+Even numbers: [2, 4, 6, 8, 10]
+
+The lambda expression isEven acts as a filter condition that determines if a number is even. It allows us to encapsulate the logic for the filtering and apply it to different numbers by invoking the test() method on the Predicate. The filterNumbers() method provides a reusable way to filter a list of numbers based on a given predicate.

@@ -1,0 +1,46 @@
+import java.util.function.Supplier;
+
+public class LambdaSupplierExample {
+    public static void main(String[] args) {
+        // Using a lambda expression with Supplier to generate a random password
+        Supplier<String> passwordSupplier = () -> {
+            String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+            StringBuilder password = new StringBuilder();
+
+            for (int i = 0; i < 10; i++) {
+                int index = (int) (Math.random() * characters.length());
+                password.append(characters.charAt(index));
+            }
+
+            return password.toString();
+        };
+
+        // Get a random password using the Supplier
+        String password = passwordSupplier.get();
+
+        System.out.println("Generated Password: " + password);
+    }
+}
+
+
+In this example, we want to generate a random password using a lambda expression and the Supplier functional interface.
+
+We define a lambda expression called passwordSupplier that takes no arguments. Inside the lambda expression, we define a string characters containing all the possible characters that can be included in the password. We then iterate 10 times to randomly select a character from the characters string and append it to the password StringBuilder. Finally, we return the generated password as a string using password.toString().
+
+Then, we use the get() method provided by the Supplier interface to invoke the lambda expression and obtain the randomly generated password.
+
+Finally, we print the generated password to the console.
+
+When you run this code, it will output something like:
+
+
+
+Generated Password: 8rP5fkE$9@
+
+
+The lambda expression passwordSupplier acts as a source or generator of a random password. It encapsulates the logic for generating a password and allows us to obtain the result by invoking the get() method on the Supplier.
+
+
+
+
+

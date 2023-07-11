@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Person{
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+
+    public static void main(String[] args) {
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Person("John", 25));
+        persons.add(new Person("Alice", 30));
+        persons.add(new Person("Bob", 20));
+
+        // Sort the list based on age using a separate Comparator implementation
+        Collections.sort(persons, new AgeComparator());
+
+        for (Person person : persons) {
+            System.out.println(person.getName() + " - " + person.getAge());
+        }
+    }
+
+    static class AgeComparator implements Comparator<Person> {
+        @Override
+        public int compare(Person person1, Person person2) {
+            return Integer.compare(person1.getAge(), person2.getAge());
+        }
+    }
+}
+
+
+To sort the list of Person objects based on a custom criteria (in this case, age), we define a separate AgeComparator class that implements the Comparator interface. The compare method in the AgeComparator class compares two Person objects based on their ages using Integer.compare.
+
+In the main method, we create a list of Person objects and add three instances with different ages. Then, we use Collections.sort and pass an instance of the AgeComparator class as the comparator.
+
+When you run this code, it will output the following:
+
+Bob - 20
+John - 25
+Alice - 30
+
+
+As you can see, the list is sorted in ascending order based on the ages of the persons using the separate AgeComparator class as the comparator.

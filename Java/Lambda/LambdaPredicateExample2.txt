@@ -1,0 +1,50 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class LambdaPredicateExample {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("apple", "banana", "cherry", "date", "elderberry");
+        
+        // Using a lambda expression with Predicate to filter words starting with 'a'
+        Predicate<String> startsWithAPredicate = word -> word.startsWith("a");
+        
+        // Filter the list of words using the Predicate
+        List<String> filteredWords = filterWords(words, startsWithAPredicate);
+        
+        System.out.println("Words starting with 'a': " + filteredWords);
+    }
+    
+    public static List<String> filterWords(List<String> words, Predicate<String> predicate) {
+        // Create a new list to store the filtered words
+        List<String> filteredWords = new ArrayList<>();
+        
+        // Iterate over the words and apply the Predicate to each word
+        for (String word : words) {
+            if (predicate.test(word)) {
+                filteredWords.add(word);
+            }
+        }
+        
+        return filteredWords;
+    }
+}
+
+
+In this example, we have a list of words (words) and we want to filter out the words that start with the letter 'a' using a lambda expression and the Predicate functional interface.
+
+We define a lambda expression called startsWithAPredicate that accepts a single argument of type String (representing a word) and checks if it starts with the letter 'a' using the startsWith() method. The lambda expression returns a boolean value.
+
+Then, we use the filterWords() method to filter the list of words. This method takes the list of words and a Predicate as arguments. It iterates over each word in the list and applies the Predicate to each word. If the Predicate returns true for a word, it is added to a new list called filteredWords.
+
+Finally, we print the list of words starting with 'a' to the console.
+
+When you run this code, it will output:
+
+Words starting with 'a': [apple]
+
+The lambda expression startsWithAPredicate acts as a filter condition that determines if a word starts with the letter 'a'. It allows us to encapsulate the logic for the filtering and apply it to different words by invoking the test() method on the Predicate. The filterWords() method provides a reusable way to filter a list of words based on a given predicate.
+
+
+
+

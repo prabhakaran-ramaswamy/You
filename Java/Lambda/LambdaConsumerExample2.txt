@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class LambdaConsumerExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        
+        // Using a lambda expression with Consumer to perform a custom operation on each number
+        Consumer<Integer> numberProcessor = number -> {
+            int squared = number * number;
+            System.out.println("Number: " + number + ", Square: " + squared);
+        };
+        
+        // Iterate over the list of numbers and apply the Consumer to each number
+        numbers.forEach(numberProcessor);
+    }
+}
+
+
+In this example, we have a list of numbers (numbers) and we want to perform a custom operation on each number using a lambda expression and the Consumer functional interface.
+
+We define a lambda expression called numberProcessor that accepts a single argument of type Integer (representing a number). Inside the lambda expression, we square the number and store it in the squared variable. Then, we print the original number and its square.
+
+Then, we use the forEach() method provided by the List interface to iterate over each element in the numbers list and apply the numberProcessor lambda expression to each number. This effectively performs the custom operation for each number in the list.
+
+When you run this code, it will output:
+
+
+Number: 1, Square: 1
+Number: 2, Square: 4
+Number: 3, Square: 9
+Number: 4, Square: 16
+Number: 5, Square: 25
+
+The lambda expression numberProcessor acts as a callback that is executed for each element in the list, allowing us to perform a custom operation on each element without explicitly writing a loop. In this example, we calculate the square of each number and print the original number along with its square.

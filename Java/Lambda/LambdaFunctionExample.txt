@@ -1,0 +1,30 @@
+import java.util.function.Function;
+
+public class LambdaFunctionExample {
+    public static void main(String[] args) {
+        // Using a lambda expression with Function to convert a string to uppercase
+        Function<String, String> stringConverter = str -> str.toUpperCase();
+        
+        // Convert a string to uppercase using the Function
+        String input = "Hello, World!";
+        String result = stringConverter.apply(input);
+        
+        System.out.println("Original: " + input);
+        System.out.println("Uppercase: " + result);
+    }
+}
+
+In this example, we want to convert a string to uppercase using a lambda expression and the Function functional interface.
+
+We define a lambda expression called stringConverter that takes a String argument (str) and uses the toUpperCase() method to convert the string to uppercase. The lambda expression returns a String value.
+
+Then, we use the apply() method provided by the Function interface to invoke the lambda expression and apply it to a given input string (input).
+
+Finally, we print the original string and the converted uppercase string to the console.
+
+When you run this code, it will output:
+
+Original: Hello, World!
+Uppercase: HELLO, WORLD!
+
+The lambda expression stringConverter acts as a function that transforms a string by converting it to uppercase. It allows us to encapsulate the logic for the conversion and apply it to different input strings by invoking the apply() method on the Function.

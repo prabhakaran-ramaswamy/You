@@ -1,0 +1,58 @@
+The Comparable interface allows you to define a natural ordering for a class and enables objects of that class to be sorted. Objects that implement the Comparable interface can be compared to each other using the compareTo method.
+
+Here's an example of a Person class implementing Comparable interface based on the person's age:
+
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public int compareTo(Person otherPerson) {
+        // Compare persons based on their age
+        return Integer.compare(this.age, otherPerson.age);
+    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person("John", 25);
+        Person person2 = new Person("Alice", 30);
+        Person person3 = new Person("Bob", 20);
+
+        List<Person> persons = new ArrayList<>();
+        persons.add(person1);
+        persons.add(person2);
+        persons.add(person3);
+
+        Collections.sort(persons); // Sorts the list based on age
+
+        for (Person person : persons) {
+            System.out.println(person.getName() + " - " + person.getAge());
+        }
+    }
+}
+
+
+
+In this example, the Person class implements the Comparable interface with the type parameter Person. The compareTo method compares two Person objects based on their ages using the Integer.compare method.
+
+In the main method, we create three Person objects with different ages and add them to a list. We then use Collections.sort to sort the list of Person objects based on their ages. Finally, we iterate over the sorted list and print the names and ages of the persons.
+
+When you run this code, it will output the following:
+
+Bob - 20
+John - 25
+Alice - 30
+
+

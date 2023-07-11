@@ -1,0 +1,27 @@
+import java.util.function.Supplier;
+
+public class LambdaSupplierExample {
+    public static void main(String[] args) {
+        // Using a lambda expression with Supplier to generate a random number
+        Supplier<Double> randomNumberGenerator = () -> Math.random();
+        
+        // Get a random number using the Supplier
+        double randomNumber = randomNumberGenerator.get();
+        
+        System.out.println("Random Number: " + randomNumber);
+    }
+}
+
+In this example, we want to generate a random number using a lambda expression and the Supplier functional interface.
+
+We define a lambda expression called randomNumberGenerator that takes no arguments and uses the Math.random() method to generate a random number. The lambda expression returns a Double value.
+
+Then, we use the get() method provided by the Supplier interface to invoke the lambda expression and obtain the random number.
+
+Finally, we print the random number to the console.
+
+When you run this code, it will output something similar to:
+
+Random Number: 0.7891829836479917
+
+The lambda expression randomNumberGenerator acts as a source or generator of a random number. It provides a way to encapsulate the logic for generating the number and allows us to obtain the result by invoking the get() method on the Supplier.
