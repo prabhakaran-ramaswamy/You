@@ -1,0 +1,55 @@
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        // Create a HashSet to store strings
+        HashSet<String> names = new HashSet<>();
+
+        // Add elements to the HashSet
+        names.add("John");
+        names.add("Mary");
+        names.add("David");
+        names.add("Lisa");
+        names.add("Sarah");
+
+        // Display the HashSet
+        System.out.println("HashSet: " + names);
+
+        // Check if the HashSet contains a specific element
+        String searchName = "Mary";
+        if (names.contains(searchName)) {
+            System.out.println(searchName + " is found in the HashSet.");
+        } else {
+            System.out.println(searchName + " is not found in the HashSet.");
+        }
+
+        // Remove an element from the HashSet
+        String removeName = "David";
+        if (names.remove(removeName)) {
+            System.out.println(removeName + " is removed from the HashSet.");
+        } else {
+            System.out.println(removeName + " is not found in the HashSet.");
+        }
+
+        // Display the updated HashSet
+        System.out.println("Updated HashSet: " + names);
+    }
+}
+
+
+Output:
+
+
+HashSet: [David, Lisa, John, Sarah, Mary]
+Mary is found in the HashSet.
+David is removed from the HashSet.
+Updated HashSet: [Lisa, John, Sarah, Mary]
+
+In the example above, we create a HashSet called names to store string values. We add several names using the add() method, and then we print the HashSet to see the elements stored in it.
+
+Next, we check if the HashSet contains a specific name using the contains() method. If the name is found, we print a message indicating that it's present; otherwise, we print a message stating that it's not found.
+
+After that, we remove a name from the HashSet using the remove() method, and we print a message indicating whether the removal was successful or not.
+
+Finally, we print the updated HashSet to see the names remaining after the removal.
+
